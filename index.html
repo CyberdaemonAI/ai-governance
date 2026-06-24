@@ -1308,7 +1308,7 @@
 <nav id="site-nav">
   <div class="container">
     <div class="nav-inner">
-      <span class="nav-logo">AI Gov Navigator</span>
+      <a class="nav-logo" href="https://cyberdaemon.ai">cyberdaemon.ai</a>
       <div class="nav-links">
         <a href="#executive">Overview</a>
         <a href="#frameworks">Frameworks</a>
@@ -1316,7 +1316,7 @@
         <a href="#threats">Threats</a>
         <a href="#defenses">Defenses</a>
         <a href="#architecture">Architecture</a>
-        <a href="#tools">Tools</a>
+        <a href="#selection-guide">Selection Guide</a>
         <a href="#dira-section">DIRA</a>
       </div>
       <div class="nav-divider"></div>
@@ -1405,60 +1405,125 @@
   </div>
 </section>
 
-<!-- FILTER BAR -->
-<div id="filter-bar">
-  <div class="container">
-    <div class="filter-inner">
-      <div class="filter-group">
-        <label for="filter-category">Category</label>
-        <select id="filter-category">
-          <option value="">All</option>
-          <option value="governance">Governance</option>
-          <option value="security">Security</option>
-          <option value="identity">Identity</option>
-          <option value="compliance">Compliance</option>
-          <option value="behavioral-auth">Behavioral Auth</option>
-        </select>
-      </div>
-      <div class="filter-group">
-        <label for="filter-nhi">NHI Coverage</label>
-        <select id="filter-nhi">
-          <option value="">All</option>
-          <option value="explicit">Explicit</option>
-          <option value="partial">Partial</option>
-          <option value="none">None</option>
-        </select>
-      </div>
-      <div class="filter-group">
-        <label for="filter-ba">Behavioral Auth</label>
-        <select id="filter-ba">
-          <option value="">All</option>
-          <option value="explicit">Explicit</option>
-          <option value="partial">Partial</option>
-          <option value="none">None</option>
-        </select>
-      </div>
-      <div class="filter-group">
-        <label for="filter-agentic">Agentic AI</label>
-        <select id="filter-agentic">
-          <option value="">All</option>
-          <option value="explicit">Explicit</option>
-          <option value="partial">Partial</option>
-          <option value="none">None</option>
-        </select>
-      </div>
-      <span id="result-count"></span>
-    </div>
-  </div>
-</div>
 
-<!-- FRAMEWORK GRID -->
+<!-- FRAMEWORK REFERENCE -->
 <section id="frameworks">
   <div class="container">
-    <h2>Frameworks</h2>
-    <div id="card-grid">
-      <p style="color:var(--text-muted); font-size:0.88rem; padding:20px 0;">Loading frameworks...</p>
+    <h2>Framework Reference</h2>
+    <p class="section-sub">Key frameworks for AI governance, security, and identity. Mapped by non-human identity coverage, behavioral authorization, and agentic AI treatment. Selected for agentic AI breadth, not a complete index.</p>
+
+    <div class="matrix-wrap">
+      <table class="coverage-table">
+        <thead>
+          <tr>
+            <th class="row-header">Short Name</th>
+            <th>Full Name</th>
+            <th>Category</th>
+            <th>NHI</th>
+            <th>Behavioral Auth</th>
+            <th>Agentic AI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">AI RMF 1.0</td>
+            <td>NIST AI Risk Management Framework</td>
+            <td>Governance</td>
+            <td><span class="sym-none" title="None">&#10005;</span></td>
+            <td><span class="sym-none" title="None">&#10005;</span></td>
+            <td><span class="sym-partial" title="Partial">&#9651;</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">EU AI Act</td>
+            <td>EU Artificial Intelligence Act</td>
+            <td>Compliance</td>
+            <td><span class="sym-none" title="None">&#10005;</span></td>
+            <td><span class="sym-none" title="None">&#10005;</span></td>
+            <td><span class="sym-partial" title="Partial">&#9651;</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">ISO/IEC 42001</td>
+            <td>AI Management Systems Standard</td>
+            <td>Compliance</td>
+            <td><span class="sym-none" title="None">&#10005;</span></td>
+            <td><span class="sym-none" title="None">&#10005;</span></td>
+            <td><span class="sym-partial" title="Partial">&#9651;</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Singapore MGF</td>
+            <td>Model AI Governance Framework for Agentic AI (IMDA, Jan 2026)</td>
+            <td>Governance</td>
+            <td><span class="sym-check" title="Explicit">&#10003;</span></td>
+            <td><span class="sym-check" title="Explicit">&#10003;</span></td>
+            <td><span class="sym-check" title="Explicit">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">OWASP LLM Top 10</td>
+            <td>OWASP Top 10 for LLM Applications</td>
+            <td>Security</td>
+            <td><span class="sym-partial" title="Partial">&#9651;</span></td>
+            <td><span class="sym-partial" title="Partial">&#9651;</span></td>
+            <td><span class="sym-partial" title="Partial">&#9651;</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">OWASP Agentic AI</td>
+            <td>OWASP Agentic AI Top 10 (2026)</td>
+            <td>Security</td>
+            <td><span class="sym-partial" title="Partial">&#9651;</span></td>
+            <td><span class="sym-partial" title="Partial">&#9651;</span></td>
+            <td><span class="sym-check" title="Explicit">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">OWASP AISVS</td>
+            <td>OWASP AI Security Verification Standard</td>
+            <td>Security</td>
+            <td><span class="sym-partial" title="Partial">&#9651;</span></td>
+            <td><span class="sym-partial" title="Partial">&#9651;</span></td>
+            <td><span class="sym-partial" title="Partial">&#9651;</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">OWASP NHI Top 10</td>
+            <td>OWASP Non-Human Identities Top 10 (2025)</td>
+            <td>Identity</td>
+            <td><span class="sym-check" title="Explicit">&#10003;</span></td>
+            <td><span class="sym-none" title="None">&#10005;</span></td>
+            <td><span class="sym-partial" title="Partial">&#9651;</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">MITRE ATLAS</td>
+            <td>Adversarial Threat Landscape for AI Systems</td>
+            <td>Security</td>
+            <td><span class="sym-none" title="None">&#10005;</span></td>
+            <td><span class="sym-none" title="None">&#10005;</span></td>
+            <td><span class="sym-partial" title="Partial">&#9651;</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">SPIFFE/SPIRE</td>
+            <td>Secure Production Identity Framework for Everyone / SPIFFE Runtime Environment</td>
+            <td>Identity</td>
+            <td><span class="sym-check" title="Explicit">&#10003;</span></td>
+            <td><span class="sym-partial" title="Partial">&#9651;</span></td>
+            <td><span class="sym-partial" title="Partial">&#9651;</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">DIRA</td>
+            <td>Dual-Intent Runtime Authorization (cyberdaemon.ai research)</td>
+            <td>Behavioral Auth</td>
+            <td><span class="sym-check" title="Explicit">&#10003;</span></td>
+            <td><span class="sym-check" title="Explicit">&#10003;</span></td>
+            <td><span class="sym-check" title="Explicit">&#10003;</span></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
+    <div class="matrix-legend">
+      <div class="legend-item"><span class="sym-check">&#10003;</span> Explicit coverage</div>
+      <div class="legend-item"><span class="sym-partial">&#9651;</span> Partial coverage</div>
+      <div class="legend-item"><span class="sym-none">&#10005;</span> Not addressed</div>
+    </div>
+
+    <p style="margin-top:20px; font-size:0.82rem; color:var(--text-muted);">Coverage assessments based on published framework text as of June 2026. NHI = Non-Human Identity credential lifecycle coverage. Behavioral Auth = runtime authorization enforcement at invocation time, not audit logging.</p>
   </div>
 </section>
 
@@ -2226,67 +2291,6 @@
   </div>
 </section>
 
-<!-- TOOLS -->
-<section id="tools">
-  <div class="container">
-    <div class="section-header">
-      <h2>Interactive Tools</h2>
-    </div>
-    <p class="section-sub">Three tools that use the framework data loaded on this page. No extra network requests.</p>
-
-    <div class="tools-grid">
-
-      <!-- Tool A: Wizard -->
-      <div class="tool-card">
-        <div class="tool-card-header">
-          <div class="tool-label">Tool A</div>
-          <div class="tool-name">Framework Recommendation Wizard</div>
-        </div>
-        <p class="tool-desc">Six questions. Outputs a prioritized framework stack with rationale.</p>
-        <div class="wizard-steps" id="wiz-dots"></div>
-        <div id="wiz-body">
-          <div class="wizard-question" id="wiz-q"></div>
-          <div class="wizard-options" id="wiz-opts"></div>
-        </div>
-        <div class="wizard-result" id="wiz-result">
-          <div id="wiz-recs"></div>
-          <button class="wizard-restart" onclick="wizReset()">Start over</button>
-        </div>
-      </div>
-
-      <!-- Tool B: Comparator -->
-      <div class="tool-card">
-        <div class="tool-card-header">
-          <div class="tool-label">Tool B</div>
-          <div class="tool-name">Side-by-Side Framework Comparator</div>
-        </div>
-        <p class="tool-desc">Select two frameworks. Compare across all nine capability areas.</p>
-        <div class="comparator-selects">
-          <select id="comp-a" onchange="renderComparator()"><option value="">Framework A</option></select>
-          <select id="comp-b" onchange="renderComparator()"><option value="">Framework B</option></select>
-        </div>
-        <div id="comparator-table-wrap">
-          <p class="comp-empty">Select two frameworks above.</p>
-        </div>
-      </div>
-
-      <!-- Tool C: Threat Mapper -->
-      <div class="tool-card">
-        <div class="tool-card-header">
-          <div class="tool-label">Tool C</div>
-          <div class="tool-name">Threat-to-Framework Mapper</div>
-        </div>
-        <p class="tool-desc">Select a threat category. See which frameworks address it and what they say.</p>
-        <div class="threat-mapper-list" id="tm-threats"></div>
-        <div id="tm-result">
-          <div class="tm-result-header" id="tm-result-label"></div>
-          <div id="tm-fw-list"></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- DIRA -->
 <section id="dira-section">
@@ -2321,13 +2325,6 @@
   </div>
 </section>
 
-<!-- WHAT'S NEW -->
-<section id="whats-new">
-  <div class="container">
-    <h2>What's New</h2>
-    <div id="updates-list" class="updates-list"></div>
-  </div>
-</section>
 
 <!-- FOOTER -->
 <footer>
@@ -2343,587 +2340,6 @@
     <p style="margin-top:4px;">Framework data current as of June 2026.</p>
   </div>
 </footer>
-
-<script>
-// ---- Updates ----
-window.UPDATES = [
-  {"date": "2026-06-16", "item": "v2 redesign: Threat Landscape, Defense Playbook, and Reference Architecture sections added."},
-  {"date": "2026-06-16", "item": "Executive Summary (Five Findings for the Board) added above the framework grid."},
-  {"date": "2026-06-16", "item": "200/300/400 learning level framing applied throughout Threats and Architecture sections."},
-  {"date": "2026-06-16", "item": "Site launched. Initial 26-framework coverage matrix v1.0."},
-  {"date": "2026-06-16", "item": "Singapore MGF (IMDA, Jan 2026 edition) -- most technically rigorous agentic treatment in any published framework."},
-  {"date": "2026-06-16", "item": "AIUC-1 Consortium framework added -- 2026 agentic use case classification standard."},
-  {"date": "2026-06-16", "item": "OWASP NHI Top 10 (2025 edition) and OWASP Agentic AI Top 10 (2026) added as separate entries."}
-];
-
-// ---- Fallback stub ----
-var FALLBACK_FRAMEWORKS = [
-  {
-    id: "nist-ai-rmf",
-    name: "NIST AI Risk Management Framework",
-    short: "AI RMF 1.0",
-    version: "1.0",
-    last_updated: "2023-01-26",
-    url: "https://airc.nist.gov/RMF",
-    category: "governance",
-    nhi_coverage: "none",
-    behavioral_auth: "none",
-    agentic_ai: "partial",
-    summary: "The foundational U.S. federal framework for managing AI risk. Organized around GOVERN, MAP, MEASURE, MANAGE. Widely adopted as a reference baseline by enterprise risk programs and federal agencies.",
-    gaps: "No NHI or machine identity controls. No behavioral or runtime authorization model."
-  },
-  {
-    id: "singapore-mgf",
-    name: "Singapore Model AI Governance Framework for Agentic AI",
-    short: "Singapore MGF",
-    version: "Jan 2026",
-    last_updated: "2026-01-01",
-    url: "https://www.imda.gov.sg",
-    category: "identity",
-    nhi_coverage: "explicit",
-    behavioral_auth: "explicit",
-    agentic_ai: "explicit",
-    summary: "Most operationally mature national governance framework for agentic AI. Four pillars: Principal Hierarchy, Scoped Permissions, Minimal Footprint, Auditable Decisions.",
-    gaps: "Lacks binding enforcement mechanisms outside Singapore's regulatory context. Behavioral authorization does not specify a runtime intent classification protocol."
-  },
-  {
-    id: "dira",
-    name: "Dual-Intent Runtime Authorization",
-    short: "DIRA",
-    version: "research",
-    last_updated: "2026-06-16",
-    url: "https://cyberdaemon.ai",
-    category: "behavioral-auth",
-    nhi_coverage: "explicit",
-    behavioral_auth: "explicit",
-    agentic_ai: "explicit",
-    summary: "Runtime authorization framework for agentic AI systems. Classifies agent intent at invocation time. Distinguishes declared intent from operational intent. Enforces at the decision point, not as a log after the fact.",
-    gaps: "Active research framework. Not yet a ratified standard. Reference implementation in progress."
-  }
-];
-
-// ---- State ----
-var allFrameworks = [];
-
-// ---- Helpers ----
-function tagClass(val) {
-  if (val === "explicit") return "tag-explicit";
-  if (val === "partial")  return "tag-partial";
-  return "tag-none";
-}
-
-function tagLabel(val) {
-  if (val === "explicit") return "Explicit";
-  if (val === "partial")  return "Partial";
-  return "None";
-}
-
-function catClass(cat) {
-  var map = {
-    "governance":      "cat-governance",
-    "security":        "cat-security",
-    "identity":        "cat-identity",
-    "compliance":      "cat-compliance",
-    "behavioral-auth": "cat-behavioral-auth"
-  };
-  return map[cat] || "cat-governance";
-}
-
-function truncate(str, n) {
-  if (!str) return "";
-  return str.length <= n ? str : str.slice(0, n).trim() + "...";
-}
-
-function esc(str) {
-  return String(str)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
-
-function buildCard(fw) {
-  var isDira = fw.id === "dira";
-  var shortSummary = truncate(fw.summary, 200);
-  var needsExpand = fw.summary && fw.summary.length > 200;
-
-  var html = '<div class="framework-card' + (isDira ? ' dira-card' : '') + '"'
-    + ' data-category="' + esc(fw.category) + '"'
-    + ' data-nhi="' + esc(fw.nhi_coverage) + '"'
-    + ' data-ba="' + esc(fw.behavioral_auth) + '"'
-    + ' data-agentic="' + esc(fw.agentic_ai) + '">';
-
-  html += '<div class="card-header">';
-  html += '<div class="card-short">' + esc(fw.short);
-  if (isDira) html += '<span class="our-research-badge">Our Research</span>';
-  html += '</div>';
-  html += '<div class="card-fullname">' + esc(fw.name) + '</div>';
-  html += '</div>';
-
-  html += '<div class="card-meta">';
-  html += '<span class="card-version">v' + esc(fw.version) + ' &middot; ' + esc(fw.last_updated) + '</span>';
-  html += '<span class="category-badge ' + catClass(fw.category) + '">' + esc(fw.category) + '</span>';
-  html += '</div>';
-
-  html += '<div class="coverage-tags">';
-  html += '<div class="tag-row"><span class="tag-label">NHI Coverage</span><span class="tag-value ' + tagClass(fw.nhi_coverage) + '">' + tagLabel(fw.nhi_coverage) + '</span></div>';
-  html += '<div class="tag-row"><span class="tag-label">Behavioral Auth</span><span class="tag-value ' + tagClass(fw.behavioral_auth) + '">' + tagLabel(fw.behavioral_auth) + '</span></div>';
-  html += '<div class="tag-row"><span class="tag-label">Agentic AI</span><span class="tag-value ' + tagClass(fw.agentic_ai) + '">' + tagLabel(fw.agentic_ai) + '</span></div>';
-  html += '</div>';
-
-  if (fw.summary) {
-    html += '<div class="card-summary">';
-    html += '<span class="summary-text" id="sumtext-' + esc(fw.id) + '">' + esc(shortSummary) + '</span>';
-    if (needsExpand) {
-      html += '<button class="read-more" onclick="expandSummary(\'' + esc(fw.id) + '\',this)" data-full="' + encodeURIComponent(fw.summary) + '">Read more</button>';
-    }
-    html += '</div>';
-  }
-
-  if (fw.gaps) {
-    html += '<button class="gaps-toggle" onclick="toggleGaps(\'' + esc(fw.id) + '\',this)">Show gaps</button>';
-    html += '<div class="card-gaps" id="gaps-' + esc(fw.id) + '"><strong>Gaps:</strong> ' + esc(fw.gaps) + '</div>';
-  }
-
-  // DIRA link fix: internal anchor instead of external URL
-  if (isDira) {
-    html += '<a class="card-link" href="#dira-section">Read DIRA research on this page &#8595;</a>';
-  } else if (fw.url) {
-    html += '<a class="card-link" href="' + esc(fw.url) + '" target="_blank" rel="noopener">View framework &#8599;</a>';
-  }
-
-  html += '</div>';
-  return html;
-}
-
-function expandSummary(id, btn) {
-  var full = decodeURIComponent(btn.dataset.full);
-  document.getElementById("sumtext-" + id).textContent = full;
-  btn.remove();
-}
-
-function toggleGaps(id, btn) {
-  var el = document.getElementById("gaps-" + id);
-  var open = el.classList.toggle("open");
-  btn.textContent = open ? "Hide gaps" : "Show gaps";
-}
-
-function applyFilters() {
-  var cat     = document.getElementById("filter-category").value;
-  var nhi     = document.getElementById("filter-nhi").value;
-  var ba      = document.getElementById("filter-ba").value;
-  var agentic = document.getElementById("filter-agentic").value;
-
-  var filtered = allFrameworks.filter(function(fw) {
-    if (cat     && fw.category        !== cat)     return false;
-    if (nhi     && fw.nhi_coverage    !== nhi)     return false;
-    if (ba      && fw.behavioral_auth !== ba)      return false;
-    if (agentic && fw.agentic_ai      !== agentic) return false;
-    return true;
-  });
-
-  renderCards(filtered);
-}
-
-function renderCards(frameworks) {
-  var grid = document.getElementById("card-grid");
-  if (!frameworks.length) {
-    grid.innerHTML = '<div class="no-results">No frameworks match the current filters.</div>';
-    document.getElementById("result-count").textContent = "0 of " + allFrameworks.length + " frameworks";
-    return;
-  }
-  grid.innerHTML = frameworks.map(buildCard).join("");
-  document.getElementById("result-count").textContent = frameworks.length + " of " + allFrameworks.length + " frameworks";
-}
-
-function wireFilters() {
-  ["filter-category", "filter-nhi", "filter-ba", "filter-agentic"].forEach(function(id) {
-    document.getElementById(id).addEventListener("change", applyFilters);
-  });
-}
-
-function updateStats(frameworks) {
-  var nhiCount  = frameworks.filter(function(f) { return f.nhi_coverage    === "explicit"; }).length;
-  var fullCount = frameworks.filter(function(f) {
-    return f.id !== "dira" && f.nhi_coverage === "explicit" && f.behavioral_auth === "explicit";
-  }).length;
-
-  document.getElementById("stat-total").textContent = frameworks.length;
-  document.getElementById("stat-nhi").textContent   = nhiCount;
-  document.getElementById("stat-ba").textContent    = fullCount;
-}
-
-function renderUpdates() {
-  var container = document.getElementById("updates-list");
-  container.innerHTML = window.UPDATES.map(function(u) {
-    return '<div class="update-item">'
-      + '<span class="update-date">' + esc(u.date) + '</span>'
-      + '<span class="update-text">' + esc(u.item) + '</span>'
-      + '</div>';
-  }).join("");
-}
-
-function boot(frameworks) {
-  allFrameworks = frameworks;
-  updateStats(frameworks);
-  renderCards(frameworks);
-  wireFilters();
-  renderUpdates();
-  initComparator(frameworks);
-  wizInit();
-  initThreatMapper();
-}
-
-// ============================================================
-// TOOL A: Framework Recommendation Wizard
-// ============================================================
-var WIZ_QUESTIONS = [
-  {
-    q: "Where will this AI system be deployed?",
-    opts: [
-      { label: "European Union (regulated market)", key: "eu" },
-      { label: "United States (federal or regulated sector)", key: "us" },
-      { label: "Commercial / global (no single jurisdiction)", key: "global" },
-      { label: "Internal tooling / not customer-facing", key: "internal" }
-    ]
-  },
-  {
-    q: "What are you building?",
-    opts: [
-      { label: "Agentic or multi-agent system", key: "agentic" },
-      { label: "LLM-powered product or API", key: "llm" },
-      { label: "AI-assisted workflow (human in loop)", key: "hitl" },
-      { label: "Model or fine-tuned system", key: "model" }
-    ]
-  },
-  {
-    q: "What is the primary governance driver?",
-    opts: [
-      { label: "Regulatory compliance", key: "compliance" },
-      { label: "Security and threat reduction", key: "security" },
-      { label: "Risk management / board reporting", key: "risk" },
-      { label: "Architecture design guidance", key: "arch" }
-    ]
-  },
-  {
-    q: "Does your system use non-human identity (service accounts, API tokens, agent credentials)?",
-    opts: [
-      { label: "Yes, extensively", key: "nhi-yes" },
-      { label: "Yes, some", key: "nhi-some" },
-      { label: "Not currently", key: "nhi-no" }
-    ]
-  },
-  {
-    q: "Will agents delegate tasks to other agents (multi-hop chains)?",
-    opts: [
-      { label: "Yes", key: "multiagent-yes" },
-      { label: "Not yet, but it is planned", key: "multiagent-planned" },
-      { label: "No", key: "multiagent-no" }
-    ]
-  },
-  {
-    q: "Do you need runtime authorization controls (enforcement at invocation time, not just audit logging)?",
-    opts: [
-      { label: "Yes, this is a requirement", key: "runtime-yes" },
-      { label: "Audit logging is sufficient for now", key: "runtime-audit" },
-      { label: "Not sure", key: "runtime-unsure" }
-    ]
-  }
-];
-
-var wizAnswers = [];
-var wizStep = 0;
-
-function wizInit() {
-  wizAnswers = [];
-  wizStep = 0;
-  wizRender();
-}
-
-function wizReset() {
-  wizAnswers = [];
-  wizStep = 0;
-  document.getElementById("wiz-result").classList.remove("visible");
-  document.getElementById("wiz-body").style.display = "";
-  wizRender();
-}
-
-function wizRender() {
-  var dots = document.getElementById("wiz-dots");
-  dots.innerHTML = WIZ_QUESTIONS.map(function(_, i) {
-    var cls = i < wizStep ? "wizard-dot done" : (i === wizStep ? "wizard-dot active" : "wizard-dot");
-    return '<div class="' + cls + '"></div>';
-  }).join("");
-
-  var q = WIZ_QUESTIONS[wizStep];
-  document.getElementById("wiz-q").textContent = q.q;
-  document.getElementById("wiz-opts").innerHTML = q.opts.map(function(o) {
-    return '<button class="wizard-option" onclick="wizPick(\'' + o.key + '\')">' + esc(o.label) + '</button>';
-  }).join("");
-}
-
-function wizPick(key) {
-  wizAnswers.push(key);
-  wizStep++;
-  if (wizStep >= WIZ_QUESTIONS.length) {
-    wizShowResult();
-  } else {
-    wizRender();
-  }
-}
-
-function wizShowResult() {
-  var recs = wizRecommend(wizAnswers);
-  document.getElementById("wiz-body").style.display = "none";
-
-  var html = recs.map(function(r) {
-    return '<div class="wizard-rec">'
-      + '<div class="wizard-rec-name">' + esc(r.name) + '</div>'
-      + '<div class="wizard-rec-why">' + esc(r.why) + '</div>'
-      + '</div>';
-  }).join("");
-  document.getElementById("wiz-recs").innerHTML = html;
-
-  var dots = document.getElementById("wiz-dots");
-  dots.innerHTML = WIZ_QUESTIONS.map(function() {
-    return '<div class="wizard-dot done"></div>';
-  }).join("");
-
-  document.getElementById("wiz-result").classList.add("visible");
-}
-
-function wizRecommend(answers) {
-  var recs = [];
-  var geo = answers[0], type = answers[1], driver = answers[2],
-      nhi = answers[3], multi = answers[4], runtime = answers[5];
-
-  if (geo === "eu") {
-    recs.push({ name: "EU AI Act", why: "Mandatory for EU deployment. Defines prohibited uses, high-risk system requirements, and conformity obligations. Start here before adding any other framework." });
-  }
-  if (driver === "compliance" || driver === "risk") {
-    recs.push({ name: "NIST AI RMF 1.0", why: "The de facto risk management baseline for U.S. and international enterprise programs. Maps cleanly to existing GRC workflows and board-level reporting." });
-  }
-  if (driver === "compliance") {
-    recs.push({ name: "ISO/IEC 42001", why: "The only certifiable AI management system standard. Pairs with NIST AI RMF for audit-ready governance documentation." });
-  }
-  if (type === "agentic" || multi === "multiagent-yes" || multi === "multiagent-planned") {
-    recs.push({ name: "Singapore MGF (Agentic AI, Jan 2026)", why: "The most operationally detailed published framework for agentic systems. Covers principal hierarchy, scoped permissions, minimal footprint, and auditable decisions. Required reading if you are building multi-agent systems." });
-    recs.push({ name: "OWASP Agentic AI Top 10", why: "Practical threat catalog for agentic systems: agent privilege escalation, memory poisoning, context manipulation, and more. Use alongside Singapore MGF for design and threat modeling." });
-  }
-  if (driver === "security" || type === "llm" || type === "agentic") {
-    recs.push({ name: "OWASP AISVS", why: "The most complete security verification standard for AI systems. Covers input validation, output handling, model integrity, supply chain, and NHI. The practitioner's primary reference." });
-    recs.push({ name: "MITRE ATLAS", why: "Adversarial threat catalog for machine learning systems. Use for structured threat modeling: maps attacker techniques to specific ML/AI attack surfaces." });
-  }
-  if (nhi === "nhi-yes" || nhi === "nhi-some") {
-    recs.push({ name: "OWASP NHI Top 10 (2025)", why: "The only framework dedicated to non-human identity risks. Covers credential lifecycle, orphaned tokens, over-provisioning, and secure workload identity patterns." });
-    recs.push({ name: "SPIFFE/SPIRE", why: "Workload identity standard. Replaces static API keys with attested, short-lived certificates. Directly addresses the NHI credential lifecycle gap in governance frameworks." });
-  }
-  if (runtime === "runtime-yes") {
-    recs.push({ name: "DIRA (research)", why: "The only framework that defines runtime behavioral authorization as a control: declared intent vs. observed action vs. authorized scope, enforced at invocation time. Active independent research." });
-  }
-  if (recs.length === 0) {
-    recs.push({ name: "NIST AI RMF 1.0", why: "The safest general-purpose starting point regardless of context." });
-    recs.push({ name: "OWASP AISVS", why: "Covers the broadest range of security verification requirements. Add this once NIST AI RMF orientation is complete." });
-  }
-  // Deduplicate
-  var seen = {};
-  return recs.filter(function(r) {
-    if (seen[r.name]) return false;
-    seen[r.name] = true;
-    return true;
-  });
-}
-
-// ============================================================
-// TOOL B: Side-by-Side Comparator
-// ============================================================
-var COMP_CAPABILITIES = [
-  { label: "NHI Coverage",                   field: "nhi_coverage" },
-  { label: "Behavioral Auth",                field: "behavioral_auth" },
-  { label: "Agentic AI",                     field: "agentic_ai" },
-  { label: "Category",                       field: "category" },
-  { label: "Version / Last Updated",         field: "_version" },
-  { label: "Summary",                        field: "summary" },
-  { label: "Key Gaps",                       field: "gaps" }
-];
-
-function initComparator(fws) {
-  var selA = document.getElementById("comp-a");
-  var selB = document.getElementById("comp-b");
-  if (!selA || !selB) return;
-  fws.forEach(function(fw) {
-    selA.innerHTML += '<option value="' + esc(fw.id) + '">' + esc(fw.short) + '</option>';
-    selB.innerHTML += '<option value="' + esc(fw.id) + '">' + esc(fw.short) + '</option>';
-  });
-}
-
-function renderComparator() {
-  var idA = document.getElementById("comp-a").value;
-  var idB = document.getElementById("comp-b").value;
-  var wrap = document.getElementById("comparator-table-wrap");
-
-  if (!idA || !idB) {
-    wrap.innerHTML = '<p class="comp-empty">Select two frameworks above.</p>';
-    return;
-  }
-  if (idA === idB) {
-    wrap.innerHTML = '<p class="comp-empty">Select two different frameworks.</p>';
-    return;
-  }
-
-  var fwA = allFrameworks.find(function(f) { return f.id === idA; });
-  var fwB = allFrameworks.find(function(f) { return f.id === idB; });
-  if (!fwA || !fwB) { wrap.innerHTML = '<p class="comp-empty">Framework data not loaded yet.</p>'; return; }
-
-  function cellVal(fw, field) {
-    if (field === "_version") return esc(fw.version || "") + (fw.last_updated ? " / " + esc(fw.last_updated) : "");
-    var v = fw[field] || "";
-    if (field === "nhi_coverage" || field === "behavioral_auth" || field === "agentic_ai") {
-      var cls = tagClass(v);
-      return '<span class="tag-value ' + cls + '" style="font-size:0.75rem;">' + tagLabel(v) + '</span>';
-    }
-    return esc(v);
-  }
-
-  var html = '<table>'
-    + '<thead><tr><th style="min-width:130px;">Capability</th><th>' + esc(fwA.short) + '</th><th>' + esc(fwB.short) + '</th></tr></thead>'
-    + '<tbody>'
-    + COMP_CAPABILITIES.map(function(cap) {
-        return '<tr><td style="color:var(--text-muted);font-weight:600;">' + esc(cap.label) + '</td>'
-          + '<td>' + cellVal(fwA, cap.field) + '</td>'
-          + '<td>' + cellVal(fwB, cap.field) + '</td></tr>';
-      }).join("")
-    + '</tbody></table>';
-
-  wrap.innerHTML = html;
-}
-
-// ============================================================
-// TOOL C: Threat-to-Framework Mapper
-// ============================================================
-var THREAT_MAP = [
-  {
-    name: "Direct Prompt Injection",
-    frameworks: [
-      { name: "OWASP LLM Top 10", coverage: "explicit", note: "LLM01: Prompt Injection. Primary reference for this threat category." },
-      { name: "OWASP AISVS", coverage: "explicit", note: "V5: Input Validation. Specifies input boundary controls." },
-      { name: "MITRE ATLAS", coverage: "explicit", note: "AML.T0054: Prompt Injection. Documents attack pattern and countermeasures." },
-      { name: "Singapore MGF", coverage: "partial", note: "Addresses input boundary controls at the principal layer. Not a technical specification." },
-      { name: "NIST AI RMF", coverage: "none", note: "Does not address the technical mechanism. Classifies adversarial inputs under MEASURE 2.5." },
-      { name: "EU AI Act", coverage: "none", note: "No technical controls specified for prompt injection." }
-    ]
-  },
-  {
-    name: "Indirect Prompt Injection (Tool Responses)",
-    frameworks: [
-      { name: "MITRE ATLAS", coverage: "explicit", note: "AML.T0054.002: Indirect prompt injection variant documented." },
-      { name: "OWASP Agentic AI Top 10", coverage: "explicit", note: "ASI09: Environmental Injection. Covers tool response injection specifically." },
-      { name: "OWASP LLM Top 10", coverage: "partial", note: "LLM01 covers the indirect variant but does not distinguish tool-augmented agent context." },
-      { name: "Singapore MGF", coverage: "partial", note: "Minimal footprint principle constrains the attack surface but does not specify a technical control." },
-      { name: "NIST AI RMF", coverage: "none", note: "MEASURE 2.5 covers adversarial inputs. Indirect injection in RAG pipelines not addressed." },
-      { name: "EU AI Act", coverage: "none", note: "No coverage of indirect injection in agentic contexts." }
-    ]
-  },
-  {
-    name: "Supply Chain / Model Provenance",
-    frameworks: [
-      { name: "EU AI Act", coverage: "explicit", note: "Articles 13 and 17 require technical documentation and data governance for high-risk AI." },
-      { name: "OWASP LLM Top 10", coverage: "explicit", note: "LLM03: Training Data Poisoning; LLM05: Supply Chain Vulnerabilities." },
-      { name: "OWASP AISVS", coverage: "explicit", note: "V9: Supply Chain. Model card requirements and integrity verification." },
-      { name: "OWASP Agentic AI Top 10", coverage: "explicit", note: "ASI07: Supply chain risks for agentic components." },
-      { name: "MITRE ATLAS", coverage: "partial", note: "AML.T0018: Backdoor ML Model. Attack pattern documented, limited countermeasure guidance." },
-      { name: "NIST AI RMF", coverage: "partial", note: "GOVERN 1.1 and MAP 1.1 address supply chain risk at the organizational level." },
-      { name: "Singapore MGF", coverage: "partial", note: "Addresses model sourcing at the governance level. No technical attestation requirements." },
-      { name: "DIRA", coverage: "none", note: "Targets runtime authorization. Supply chain is out of scope." }
-    ]
-  },
-  {
-    name: "Agent Privilege Escalation",
-    frameworks: [
-      { name: "OWASP Agentic AI Top 10", coverage: "explicit", note: "ASI03: Agent Privilege Escalation. The most direct reference for this threat." },
-      { name: "Singapore MGF", coverage: "explicit", note: "Scoped permissions per invocation and principal hierarchy design directly address this threat." },
-      { name: "OWASP AISVS", coverage: "partial", note: "Access control requirements apply but do not address multi-hop delegation specifically." },
-      { name: "NIST AI RMF", coverage: "none", note: "No coverage of privilege escalation in agent delegation chains." },
-      { name: "EU AI Act", coverage: "none", note: "No coverage of agent-to-agent authorization boundaries." },
-      { name: "MITRE ATLAS", coverage: "none", note: "Does not document agent privilege escalation as a distinct attack pattern." }
-    ]
-  },
-  {
-    name: "Persistent State Poisoning",
-    frameworks: [
-      { name: "OWASP Agentic AI Top 10", coverage: "explicit", note: "ASI01: Memory Poisoning. The only framework that names this as a distinct threat." },
-      { name: "Singapore MGF", coverage: "partial", note: "Minimal footprint principle constrains what agents retain. No read/write authorization model for memory stores." },
-      { name: "NIST AI RMF", coverage: "none", note: "No coverage of persistent agent memory as an attack surface." },
-      { name: "EU AI Act", coverage: "none", note: "No coverage of persistent state in agentic systems." },
-      { name: "MITRE ATLAS", coverage: "none", note: "Does not document cross-session memory manipulation as a distinct technique." }
-    ]
-  },
-  {
-    name: "NHI Credential Abuse",
-    frameworks: [
-      { name: "OWASP NHI Top 10", coverage: "explicit", note: "The canonical reference for NHI credential risks: lifecycle management, orphaned tokens, over-provisioning." },
-      { name: "SPIFFE/SPIRE", coverage: "explicit", note: "Workload identity attestation and short-lived certificate issuance. Eliminates long-lived credential persistence." },
-      { name: "Singapore MGF", coverage: "partial", note: "NHI lifecycle addressed within principal hierarchy guidance." },
-      { name: "OWASP AISVS", coverage: "partial", note: "Access control requirements cover some NHI provisioning concerns." },
-      { name: "NIST AI RMF", coverage: "none", note: "No coverage of credential lifecycle for AI system components." },
-      { name: "EU AI Act", coverage: "none", note: "No coverage of NHI credential management." }
-    ]
-  },
-  {
-    name: "Context Window Flooding",
-    frameworks: [
-      { name: "OWASP AISVS", coverage: "partial", note: "Input validation and context length limits specified as implementation requirements." },
-      { name: "MITRE ATLAS", coverage: "partial", note: "Context manipulation documented under AML.T0054. Limited operational guidance." },
-      { name: "NIST AI RMF", coverage: "none", note: "Not addressed as a distinct threat category." },
-      { name: "EU AI Act", coverage: "none", note: "No coverage." },
-      { name: "OWASP LLM Top 10", coverage: "none", note: "Not addressed as a distinct category. Related to LLM01 but not named." },
-      { name: "Singapore MGF", coverage: "none", note: "Not addressed." }
-    ]
-  }
-];
-
-function initThreatMapper() {
-  var list = document.getElementById("tm-threats");
-  if (!list) return;
-  list.innerHTML = THREAT_MAP.map(function(t, i) {
-    return '<button class="tm-threat-btn" onclick="tmSelect(' + i + ',this)">' + esc(t.name) + '</button>';
-  }).join("");
-}
-
-function tmSelect(idx, btn) {
-  document.querySelectorAll(".tm-threat-btn").forEach(function(b) { b.classList.remove("active"); });
-  btn.classList.add("active");
-
-  var threat = THREAT_MAP[idx];
-  document.getElementById("tm-result-label").textContent = "Framework coverage: " + threat.name;
-
-  var html = threat.frameworks.map(function(fw) {
-    var cls = tagClass(fw.coverage);
-    return '<div class="tm-fw-row">'
-      + '<div class="tm-fw-name">' + esc(fw.name) + '</div>'
-      + '<div><span class="tag-value ' + cls + '" style="font-size:0.72rem;">' + tagLabel(fw.coverage) + '</span>'
-      + '<div class="tm-fw-note">' + esc(fw.note) + '</div></div>'
-      + '</div>';
-  }).join("");
-
-  document.getElementById("tm-fw-list").innerHTML = html;
-  document.getElementById("tm-result").classList.add("visible");
-}
-
-// ---- Fetch with fallback ----
-fetch('./frameworks.json')
-  .then(function(r) {
-    if (!r.ok) throw new Error("HTTP " + r.status);
-    return r.json();
-  })
-  .then(function(data) {
-    boot(data.frameworks || data);
-  })
-  .catch(function(err) {
-    console.warn("frameworks.json fetch failed, using fallback stub.", err);
-    boot(FALLBACK_FRAMEWORKS);
-  });
-</script>
 
 <script>
   (function () {
